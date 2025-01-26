@@ -3,9 +3,9 @@ package authorization;
 import files.ReusableMethods;
 import io.restassured.path.json.JsonPath;
 import org.testng.Assert;
-import pojoclasses.Api;
-import pojoclasses.GetCourses;
-import pojoclasses.WebAutomation;
+import pojo.Api;
+import pojo.GetCourses;
+import pojo.WebAutomation;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -43,15 +43,16 @@ public class OAuthClientCredentials {
 				System.out.println(api.get(i).getPrice());
 		}
 		System.out.println("Courses under web automation are");
-		List<WebAutomation> web=response2.getCourses().getWebAutomation();
+
 		ArrayList<String> courseNamesActual=new ArrayList<String>();
-		for(int i=0;i<web.size();i++)
+		List<WebAutomation> web=response2.getCourses().getWebAutomation();
+		for(WebAutomation w:web)
 		{
-			System.out.println(web.get(i).getCourseTitle());
-			courseNamesActual.add(web.get(i).getCourseTitle());
+			System.out.println(w.getCourseTitle());
+			courseNamesActual.add(w.getCourseTitle());
 		}
 		
-		Assert.assertTrue(courseNamesActual.equals(courseNamesExpected));
+		Assert.assertEquals(courseNamesActual,courseNamesExpected);
 	}
 
 }

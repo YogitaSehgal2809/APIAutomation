@@ -4,10 +4,10 @@ import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.http.ContentType;
 import io.restassured.path.json.JsonPath;
 import io.restassured.specification.RequestSpecification;
-import pojoclasses.LoginRequest;
-import pojoclasses.LoginResponse;
-import pojoclasses.OrderDetails;
-import pojoclasses.Orders;
+import pojo.LoginRequest;
+import pojo.LoginResponse;
+import pojo.OrderDetails;
+import pojo.Orders;
 
 import java.io.File;
 import java.util.ArrayList;

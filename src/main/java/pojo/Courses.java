@@ -1,7 +1,6 @@
 package pojo;
 
-import pojoclasses.Mobile;
-import pojoclasses.WebAutomation;
+
 
 import java.util.List;
 
@@ -20,6 +19,7 @@ public class Courses {
 	public void setWebAutomation(List<WebAutomation> webAutomation) {
 		this.webAutomation = webAutomation;
 	}
+
 	public List<Api> getApi() {
 		return api;
 	}

@@ -7,6 +7,7 @@ import io.restassured.path.json.JsonPath;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
+
 import static io.restassured.RestAssured.given;
 
 public class AddDeleteBook {
@@ -43,7 +44,7 @@ public class AddDeleteBook {
 
 	//set of data to be sent for the test, need to be sent as an array, number of arrays sent will determine the number of runs
 	@DataProvider(name="Data")
-	public Object getData() {
+	public Object[][] getData() {
 		return new Object[][]{{"test","10204"},{"test","10205"},{"test","10206"}};
 	}
 

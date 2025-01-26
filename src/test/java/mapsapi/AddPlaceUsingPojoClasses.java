@@ -1,8 +1,9 @@
 package mapsapi;
 
 import io.restassured.RestAssured;
-import pojoclasses.AddPlacePayload;
-import pojoclasses.Location;
+import pojo.AddPlacePayload;
+import pojo.Location;
+
 
 import java.util.ArrayList;
 import java.util.List;
