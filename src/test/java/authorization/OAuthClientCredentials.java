@@ -37,10 +37,10 @@ public class OAuthClientCredentials {
 		System.out.println("Price for Soap UI Course is");
 
 		List<Api> api=response2.getCourses().getApi();
-		for(int i=0;i<api.size();i++)
+		for(Api a:api)
 		{
-			if(api.get(i).getCourseTitle().equals("SoapUI Webservices testing"))
-				System.out.println(api.get(i).getPrice());
+			if(a.getCourseTitle().equals("SoapUI Webservices testing"))
+				System.out.println(a.getPrice());
 		}
 		System.out.println("Courses under web automation are");
 
