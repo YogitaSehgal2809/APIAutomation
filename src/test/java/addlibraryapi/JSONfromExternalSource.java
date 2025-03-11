@@ -22,7 +22,7 @@ public class JSONfromExternalSource {
 		//this can be done by converting file content to byte then byte to string
 		//there are 2 ways to fetch the file from system, by placing it on system, or by placing it in eclipse
 
-		String Payload1=new String(Files.readAllBytes(Paths.get(System.getProperty("user.dir")+"//src//test//resources//Payload.json")));
+		String Payload1=new String(Files.readAllBytes(Paths.get(System.getProperty("user.dir")+"//src//test//java//resources//Payload.json")));
 		System.out.println(Payload1);
 //		String Payload2=new String(Files.readAllBytes(Paths.get("/home/yogitasehgal/Downloads/Payload.json")));
 //		System.out.println(Payload2);

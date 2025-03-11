@@ -36,7 +36,7 @@ public class AddPlaceUsingPojoClasses {
 		p.setLocation(location);
 		
 		//Resource will get concatenated with baseURI
-		
+		RestAssured.useRelaxedHTTPSValidation();
 		RestAssured.baseURI="https://rahulshettyacademy.com";
 		String response =given().log().all().queryParam("key", "qaclick123")
 		.body(p)
