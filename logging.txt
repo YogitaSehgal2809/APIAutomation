@@ -27,7 +27,7 @@ Body:
     "language": "Hindi"
 }
 HTTP/1.1 200 OK
-Date: Tue, 11 Mar 2025 05:42:50 GMT
+Date: Tue, 11 Mar 2025 08:54:20 GMT
 Server: Apache/2.4.52 (Ubuntu)
 Access-Control-Allow-Origin: *
 Access-Control-Allow-Methods: POST
@@ -40,17 +40,17 @@ Content-Type: application/json;charset=UTF-8
 
 {
     "status": "OK",
-    "place_id": "0b634b0763b8c00580eb0ae2f8c5dd3b",
+    "place_id": "b4637ccbad535a03a5cb58decac18691",
     "scope": "APP",
-    "reference": "cd70cb7dd12decc555a5a1e234c022edcd70cb7dd12decc555a5a1e234c022ed",
-    "id": "cd70cb7dd12decc555a5a1e234c022ed"
+    "reference": "bdb6d7c8e096b3a6c7d01692f63d919dbdb6d7c8e096b3a6c7d01692f63d919d",
+    "id": "bdb6d7c8e096b3a6c7d01692f63d919d"
 }
 Request method:	GET
-Request URI:	https://rahulshettyacademy.com/maps/api/place/get/json?key=qaclick123&place_id=0b634b0763b8c00580eb0ae2f8c5dd3b
+Request URI:	https://rahulshettyacademy.com/maps/api/place/get/json?key=qaclick123&place_id=b4637ccbad535a03a5cb58decac18691
 Proxy:			<none>
 Request params:	<none>
 Query params:	key=qaclick123
-				place_id=0b634b0763b8c00580eb0ae2f8c5dd3b
+				place_id=b4637ccbad535a03a5cb58decac18691
 Form params:	<none>
 Path params:	<none>
 Headers:		Accept=*/*
@@ -59,14 +59,14 @@ Cookies:		<none>
 Multiparts:		<none>
 Body:			<none>
 HTTP/1.1 200 OK
-Date: Tue, 11 Mar 2025 05:42:51 GMT
+Date: Tue, 11 Mar 2025 08:54:20 GMT
 Server: Apache/2.4.52 (Ubuntu)
 Access-Control-Allow-Origin: *
 Access-Control-Allow-Methods: POST
 Access-Control-Max-Age: 3600
 Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
 Content-Length: 221
-Keep-Alive: timeout=5, max=99
+Keep-Alive: timeout=5, max=100
 Connection: Keep-Alive
 Content-Type: application/json;charset=UTF-8
 
@@ -96,17 +96,17 @@ Cookies:		<none>
 Multiparts:		<none>
 Body:
 {
-    "place_id": "0b634b0763b8c00580eb0ae2f8c5dd3b"
+    "place_id": "b4637ccbad535a03a5cb58decac18691"
 }
 HTTP/1.1 200 OK
-Date: Tue, 11 Mar 2025 05:42:53 GMT
+Date: Tue, 11 Mar 2025 08:54:22 GMT
 Server: Apache/2.4.52 (Ubuntu)
 Access-Control-Allow-Origin: *
 Access-Control-Allow-Methods: POST
 Access-Control-Max-Age: 3600
 Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
 Content-Length: 15
-Keep-Alive: timeout=5, max=98
+Keep-Alive: timeout=5, max=100
 Connection: Keep-Alive
 Content-Type: application/json;charset=UTF-8
 
