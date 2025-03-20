@@ -1,0 +1,58 @@
+name: API Automation with BDD
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Set Up Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      - name: Cache Maven Dependencies
+        uses: actions/cache@v4
+        with:
+          path: ~/.m2
+          key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
+          restore-keys: |
+            ${{ runner.os }}-maven-
+
+      - name: Install Dependencies
+        run: mvn clean install
+
+      - name: Run Tests and Generate Reports
+        run: mvn test -DsuiteXmlFile=testng.xml
+
+      - name: Upload Extent Reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: Extent Reports
+          path: target/extent-reports/ExtentReport.html
+
+      - name: Upload Cucumber HTML Report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: Cucumber HTML Report
+          path: target/cucumber-testng-html-report
+
+      - name: Upload Cucumber JSON Report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: Cucumber JSON Report
+          path: target/jsonReports/cucumber-testng-report.json
