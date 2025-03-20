@@ -41,7 +41,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: Extent Reports
-          path: target/extent-reports/ExtentReport.html
+          path: target/cucumber-reports/ExtentReport.html
 
       - name: Upload Cucumber HTML Report
         if: always()
