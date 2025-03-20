@@ -2,6 +2,7 @@
 Feature: Validating place APIs
 #  Test case
 #  When performing parametrization, we need to use scenario outline instead of scenario
+#  mvn test -Dcucumber.filter.tags="@AddPlace"
   @AddPlace
   Scenario Outline: Verify if place is being successfully added through AddPlace API
     Given Add Place Payload with "<name>" "<language>" "<address>"
@@ -16,7 +17,7 @@ Feature: Validating place APIs
       | name | language | address |
       | Jatin | Hindi | #764, New Hamida Colony |
    #   | Yogita | English | #42, East Bhatia Nagar |
-
+#  mvn test -Dcucumber.filter.tags="@DeletePlace"
   @DeletePlace
   Scenario: Verify if Delete place functionality is working
     Given Delete Place Payload

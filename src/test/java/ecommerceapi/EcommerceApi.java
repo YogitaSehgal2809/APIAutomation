@@ -18,6 +18,7 @@ import static io.restassured.RestAssured.given;
 public class EcommerceApi {
 	public static void main(String[] args)
 	{
+//		The below code uses POJO classes to send payload, serialize JAVA Object to JSON, as well as extract fields from response using POJO classes by deserializing
 //		LOGIN
 		//to pass common prerequisites
 		RequestSpecification reqSpecLogin= new RequestSpecBuilder().setBaseUri("https://rahulshettyacademy.com").setContentType(ContentType.JSON).build();
@@ -66,7 +67,7 @@ public class EcommerceApi {
 		OrderDetails orderDetails=new OrderDetails();
 		orderDetails.setCountry("India");
 		orderDetails.setProductOrderedId(productId);
-		List<OrderDetails> orderDetailsList=new ArrayList<OrderDetails>();
+		List<OrderDetails> orderDetailsList=new ArrayList<>();
 		orderDetailsList.add(orderDetails);
 //		System.out.println(productId);
 		Orders orders=new Orders();

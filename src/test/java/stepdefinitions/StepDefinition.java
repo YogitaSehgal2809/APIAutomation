@@ -8,6 +8,7 @@ import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import io.restassured.specification.ResponseSpecification;
+import org.testng.Assert;
 import resources.APIResource;
 import resources.TestDataBuild;
 import resources.Utils;
@@ -15,7 +16,6 @@ import resources.Utils;
 import java.io.IOException;
 
 import static io.restassured.RestAssured.given;
-import static org.junit.Assert.assertEquals;
 
 //to use all methods of Utils class without creating Utils object
 public class StepDefinition extends Utils {
@@ -44,13 +44,13 @@ public class StepDefinition extends Utils {
     }
     @Then("API call is success with status code {int}")
     public void api_call_is_success_with_status_code(Integer int1) {
-       assertEquals(200,response.getStatusCode());
+        Assert.assertEquals(response.getStatusCode(),int1);
 
 
     }
     @Then("{string} in response body is {string}")
     public void in_response_body_is(String keyValue, String ExpectedValue) {
-        assertEquals(ExpectedValue,getJsonPath(response,keyValue));
+        Assert.assertEquals(ExpectedValue,getJsonPath(response,keyValue));
 
     }
 
@@ -60,7 +60,7 @@ public class StepDefinition extends Utils {
         requestSpecification =given().spec(requestSpecification()).queryParam("place_id",placeId);
         user_calls_api_with_post_http_request(resource,"GET");
         String actualName=getJsonPath(response, "name");
-        assertEquals(actualName,expectedName);
+        Assert.assertEquals(actualName,expectedName);
 
     }
 
